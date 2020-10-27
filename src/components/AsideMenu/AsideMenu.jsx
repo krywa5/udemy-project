@@ -6,9 +6,9 @@ import { StoreContext } from '../../store/StoreProvider';
 import UserMenu from './subcomponents/UserMenu';
 import AdminMenu from './subcomponents/AdminMenu';
 
-const style = bemCssModule(AsideMenuStyles);
+import { ADMIN_TYPE } from '../../consts/userTypes';
 
-const ADMIN_TYPE = 1;
+const style = bemCssModule(AsideMenuStyles);
 
 const AsideMenu = () => {
   const { user } = useContext(StoreContext);
