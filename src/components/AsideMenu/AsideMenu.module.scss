@@ -2,6 +2,12 @@
   padding: 15px;
   widows: 200px;
   background-color: #ddd;
+  position: relative;
+
+  &__nav-wrapper {
+    position: sticky;
+    top: 100px;
+  }
 
   &__title {
     margin-top: 20px;
