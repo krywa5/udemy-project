@@ -7,6 +7,7 @@ import Courses from '../Courses/Courses';
 import UserCourses from '../UserCourses/UserCourses';
 
 import { ADMIN_TYPE } from '../../consts/userTypes';
+import AdminPanel from '../AdminPanel/AdminPanel';
 
 const style = bemCssModules(ContentStyles);
 
@@ -22,7 +23,7 @@ const Content = () => {
       <Switch>
         <Route exact path="/" render={() => <Courses />} />
         {isUserLogged && <Route exact path="/my-courses" render={() => <UserCourses />} />}
-        {isAdmin && <Route exact path="/manage-courses" render={() => <p>MZarządzanie kursami</p>} />}
+        {isAdmin && <Route exact path="/manage-courses" render={() => <AdminPanel />} />}
         <Redirect to="/" />
       </Switch>
     </main>
